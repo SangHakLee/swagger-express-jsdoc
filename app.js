@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var middleware = require('swagger-express-middleware');
 var swaggerUi = require('swagger-ui-express');
 var swaggerJSDoc = require('swagger-jsdoc');
 
@@ -28,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var options = {
   swaggerDefinition: {
     info: {
-      title: 'Hello World', // Title (required)
+      title: 'swagger-express-jsdoc', // Title (required)
       version: '1.0.0', // Version (required)
     },
   },
@@ -44,6 +43,7 @@ app.get('/api-docs.json', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
   res.send(swaggerSpec);
 });
+console.log(swaggerSpec);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // catch 404 and forward to error handler
