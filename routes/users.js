@@ -51,7 +51,7 @@ router.post('/', function(req, res, next) {
  * @swagger
  * /users:
  *   get:
- *     summary: All Users
+ *     summary: Get Users
  *     description: Get All Users
  *     tags: [Users]
  *     produces:
@@ -94,8 +94,7 @@ router.get('/', function(req, res, next) {
 router.put('/:username', function(req, res, next) {
   var user = users.indexOf(req.params.username);
   if (user > -1) {
-    users.splice(user, 1);
-    users.splice(users.lastIndexOf(req.params.username), 1, req.body.name);
+    users.splice(user, 1, req.body.name);
     res.json({results: users});
   } else {
     res.sendStatus(400);
@@ -121,10 +120,17 @@ router.put('/:username', function(req, res, next) {
  *     responses:
  *       200:
  *         description: Success delete user
+ *       400:
+ *         description: Can't find user by username
  */
 router.delete('/:username', function(req, res, next) {
-  users.splice( (users.indexOf(req.params.username) ) ,1);
-  res.json({results: users});
+  var user = users.indexOf(req.params.username);
+  if (user > -1) {
+    users.splice(user ,1);
+    res.json({results: users});
+  } else {
+    res.sendStatus(400);
+  }
 });
 
 module.exports = router;
