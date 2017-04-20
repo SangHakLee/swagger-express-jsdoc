@@ -3,8 +3,15 @@
 Example of [Express][1] with [swagger-jsdoc][2]
 
 ## Install
+### git
+```bash
+$ git clone https://github.com/SangHakLee/swagger-express-jsdoc.git
+```
+
+### NPM
 ```bash
 $ npm i swagger-express-jsdoc
+$ cd node_modules
 ```
 
 ## How to use

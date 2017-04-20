@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.2] - 2017.04.20
+### Changed
+- README.md 수정 설치 방법 변경
+
 ## [1.0.1] - 2017.04.20
 ### Changed
 - Users CRUD 수정
