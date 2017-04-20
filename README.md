@@ -46,7 +46,7 @@ app.get('/api-docs.json', function(req, res) { // line 41
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec)); // line 45
 ```
 #### var options (line 27)
-> You Swagger docs information here.
+ Your Swagger docs information here.
 [swagger-jsdoc][6]
 
 ##### swaggerDefinition.info
@@ -70,12 +70,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec)); // line 45
 }
 ```
 ##### apis
-> Your routing files path.
-If you routing file path like this, 
+Your routing files path.
+If your routing file path like this, 
 - /controllers/users.js
 - /controllers/stores.js
 
-Your apis value like this, **apis: ['./controllers/*']**
+Set your `apis` value like this, **apis: ['./controllers/*']**
 
 #### var swaggerSpec (line 36)
 It will be json object.
@@ -83,10 +83,11 @@ Your `option` value and `apis` value are combined.
 
 #### /api-docs.json (line 41)
 This returns a simple json document.
+http://localhost:3000/api-docs.json
 
 #### /api-docs (line 45)
 This will convert the json document to Swagger-ui.
-So when you connect with http://localhost:3000/api-docs/, it will make you see beautiful documents.
+So when you connect with http://localhost:3000/api-docs, it will make you see beautiful documents.
 
   [1]: http://expressjs.com/
   [2]: https://github.com/Surnet/swagger-jsdoc
