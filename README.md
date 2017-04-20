@@ -18,6 +18,7 @@ $ cd node_modules
 ### Start Server
 ```bash
 $ cd swagger-express-jsdoc
+$ npm install
 $ npm start
 ```
 ### Use swagger-jsdoc

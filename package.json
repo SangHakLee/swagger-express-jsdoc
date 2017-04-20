@@ -1,6 +1,6 @@
 {
   "name": "swagger-express-jsdoc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generates swagger JSDoc with express",
   "repository": {
     "type": "git",
