@@ -1,3 +1,4 @@
+var debug = require('debug')('swagger-express-jsdoc');
 var express = require('express');
 var router = express.Router();
 

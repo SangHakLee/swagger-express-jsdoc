@@ -33,7 +33,6 @@ var options = {
   },
   apis: ['./routes/*'], // Path to the API docs
 };
-
 var swaggerSpec = swaggerJSDoc(options);
 
 app.use('/', routes);
