@@ -1,13 +1,13 @@
 {
   "name": "swagger-express-jsdoc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generates swagger JSDoc with express",
   "repository": {
     "type": "git",
     "url": "https://github.com/SangHakLee/swagger-express-jsdoc"
   },
   "scripts": {
-    "start": "DEBUG=swagger-express-jsdoc node bin/www"
+    "start": "cross-env DEBUG=swagger-express-jsdoc node bin/www"
   },
   "keywords": [
     "jsdoc",
@@ -17,14 +17,17 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "ejs": "~2.4.1",
-    "express": "~4.13.4",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0",
-    "swagger-jsdoc": "^1.9.2",
-    "swagger-ui-express": "^1.0.7"
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "morgan": "^1.9.1",
+    "serve-favicon": "^2.5.0",
+    "swagger-jsdoc": "^3.2.9",
+    "swagger-ui-express": "^4.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "debug": "^4.1.1"
   }
 }
